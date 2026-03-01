@@ -13,8 +13,20 @@
     "clean": "rm -rf dist",
     "check-types": "tsc --noEmit"
   },
-  "files": ["dist"],
-  "keywords": ["mcp", "transport", "ev-charging", "railway", "open-charge-map", "overpass", "ai-tools", "model-context-protocol"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "transport",
+    "ev-charging",
+    "railway",
+    "open-charge-map",
+    "overpass",
+    "ai-tools",
+    "model-context-protocol"
+  ],
   "license": "MIT",
   "dependencies": {
     "@mcp-market/core": "workspace:*",
@@ -24,5 +36,13 @@
   "devDependencies": {
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepdevy/mcp-market.git",
+    "directory": "packages/transport"
+  },
+  "author": "deepdevy",
+  "homepage": "https://github.com/deepdevy/mcp-market/tree/main/packages/transport",
+  "mcpName": "io.github.deepdevy/transport"
 }

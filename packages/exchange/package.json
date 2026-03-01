@@ -13,8 +13,18 @@
     "clean": "rm -rf dist",
     "check-types": "tsc --noEmit"
   },
-  "files": ["dist"],
-  "keywords": ["mcp", "exchange", "currency", "frankfurter", "ai-tools", "model-context-protocol"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "exchange",
+    "currency",
+    "frankfurter",
+    "ai-tools",
+    "model-context-protocol"
+  ],
   "license": "MIT",
   "dependencies": {
     "@mcp-market/core": "workspace:*",
@@ -24,5 +34,13 @@
   "devDependencies": {
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepdevy/mcp-market.git",
+    "directory": "packages/exchange"
+  },
+  "author": "deepdevy",
+  "homepage": "https://github.com/deepdevy/mcp-market/tree/main/packages/exchange",
+  "mcpName": "io.github.deepdevy/exchange"
 }

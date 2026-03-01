@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.deepdevy/space",
+  "description": "MCP server for NASA space data APIs — requires NASA_API_KEY (DEMO_KEY fallback)",
+  "repository": {
+    "url": "https://github.com/deepdevy/mcp-market",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@mcp-market/space",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "NASA_API_KEY",
+      "description": "NASA API key for space data access",
+      "isRequired": false,
+      "isSecret": true
+    }
+  ]
+}

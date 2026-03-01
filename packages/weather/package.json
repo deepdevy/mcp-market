@@ -13,8 +13,17 @@
     "clean": "rm -rf dist",
     "check-types": "tsc --noEmit"
   },
-  "files": ["dist"],
-  "keywords": ["mcp", "weather", "open-meteo", "ai-tools", "model-context-protocol"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "weather",
+    "open-meteo",
+    "ai-tools",
+    "model-context-protocol"
+  ],
   "license": "MIT",
   "dependencies": {
     "@mcp-market/core": "workspace:*",
@@ -24,5 +33,13 @@
   "devDependencies": {
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepdevy/mcp-market.git",
+    "directory": "packages/weather"
+  },
+  "author": "deepdevy",
+  "homepage": "https://github.com/deepdevy/mcp-market/tree/main/packages/weather",
+  "mcpName": "io.github.deepdevy/weather"
 }

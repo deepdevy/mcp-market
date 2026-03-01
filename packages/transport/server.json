@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.deepdevy/transport",
+  "description": "MCP server for EV charging stations and railway stations via Open Charge Map and Overpass APIs — no API key required",
+  "repository": {
+    "url": "https://github.com/deepdevy/mcp-market",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@mcp-market/transport",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "OPEN_CHARGE_MAP_KEY",
+      "description": "Open Charge Map API key for charging station data",
+      "isRequired": false,
+      "isSecret": true
+    }
+  ]
+}

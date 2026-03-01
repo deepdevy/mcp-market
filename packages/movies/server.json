@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.deepdevy/movies",
+  "description": "MCP server for movie data via OMDB API",
+  "repository": {
+    "url": "https://github.com/deepdevy/mcp-market",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@mcp-market/movies",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "OMDB_API_KEY",
+      "description": "OMDB API key for movie data access",
+      "isRequired": true,
+      "isSecret": true
+    }
+  ]
+}

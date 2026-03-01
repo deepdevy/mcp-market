@@ -22,12 +22,52 @@
 
 ## Quick Start
 
-**1. Add to Claude Desktop** &mdash; edit `~/Library/Application Support/Claude/claude_desktop_config.json`:
+### Install
+
+```bash
+# Use directly via npx (no install needed)
+npx @mcp-market/weather
+
+# Or install globally
+npm install -g @mcp-market/weather
+```
+
+> [!NOTE]
+> Servers marked with :key: require an API key via environment variable.
+> Example: `OMDB_API_KEY=your-key npx @mcp-market/movies`
+
+### Claude Desktop
+
+Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
 
 ```json
 {
   "mcpServers": {
-    "weather": {
+    "mcp-market-weather": {
+      "command": "npx",
+      "args": ["-y", "@mcp-market/weather"]
+    },
+    "mcp-market-crypto": {
+      "command": "npx",
+      "args": ["-y", "@mcp-market/crypto"]
+    }
+  }
+}
+```
+
+**Restart Claude.** That's it. Ask Claude about the weather.
+
+> [!TIP]
+> Each package is independently installable. Pick only the ones you need &mdash; no need to install the entire monorepo.
+
+### Cursor
+
+Go to **Settings → MCP → Add Server** and add:
+
+```json
+{
+  "mcpServers": {
+    "mcp-market-weather": {
       "command": "npx",
       "args": ["-y", "@mcp-market/weather"]
     }
@@ -35,27 +75,20 @@
 }
 ```
 
-**2. Restart Claude.** That's it. Ask Claude about the weather.
+### VS Code
 
-> [!TIP]
-> Each package is independently installable. Pick only the ones you need &mdash; no need to install the entire monorepo.
+Create or edit `.vscode/mcp.json` in your project:
 
-<details>
-<summary><strong>Using with Cursor / Windsurf / other MCP clients</strong></summary>
-
-The same pattern works with any MCP-compatible client. Point the client to the package binary:
-
-```bash
-npx -y @mcp-market/weather
+```json
+{
+  "servers": {
+    "mcp-market-weather": {
+      "command": "npx",
+      "args": ["-y", "@mcp-market/weather"]
+    }
+  }
+}
 ```
-
-Or run locally after cloning:
-
-```bash
-node packages/weather/dist/index.js
-```
-
-</details>
 
 <details>
 <summary><strong>Servers that need API keys</strong></summary>
@@ -76,10 +109,9 @@ Some servers require API keys. Pass them via the `env` field:
 }
 ```
 
-See the [API Key Required](#-api-key-required) section for the full list.
+See the [API Key Required](#key-api-key-required) section for the full list.
 
 </details>
-
 ---
 
 ## What's Inside

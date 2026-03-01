@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.deepdevy/news",
+  "description": "MCP server for news data via GNews API",
+  "repository": {
+    "url": "https://github.com/deepdevy/mcp-market",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@mcp-market/news",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "GNEWS_API_KEY",
+      "description": "Google News API key for news data access",
+      "isRequired": true,
+      "isSecret": true
+    }
+  ]
+}

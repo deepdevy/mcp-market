@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.deepdevy/ip",
+  "description": "MCP server for IP geolocation data via ip-api.com and ipapi.co — no API key required",
+  "repository": {
+    "url": "https://github.com/deepdevy/mcp-market",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@mcp-market/ip",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
