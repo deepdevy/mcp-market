@@ -1,0 +1,28 @@
+{
+  "name": "@mcp-market/transport",
+  "version": "0.1.0",
+  "description": "MCP server for EV charging stations and railway stations via Open Charge Map and Overpass APIs — no API key required",
+  "type": "module",
+  "bin": {
+    "mcp-market-transport": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "check-types": "tsc --noEmit"
+  },
+  "files": ["dist"],
+  "keywords": ["mcp", "transport", "ev-charging", "railway", "open-charge-map", "overpass", "ai-tools", "model-context-protocol"],
+  "license": "MIT",
+  "dependencies": {
+    "@mcp-market/core": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

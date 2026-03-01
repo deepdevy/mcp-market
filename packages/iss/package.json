@@ -1,0 +1,28 @@
+{
+  "name": "@mcp-market/iss",
+  "version": "0.1.0",
+  "description": "MCP server for ISS tracking via Open Notify and Where The ISS At APIs — no API key required",
+  "type": "module",
+  "bin": {
+    "mcp-market-iss": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "check-types": "tsc --noEmit"
+  },
+  "files": ["dist"],
+  "keywords": ["mcp", "iss", "space", "open-notify", "where-the-iss-at", "ai-tools", "model-context-protocol"],
+  "license": "MIT",
+  "dependencies": {
+    "@mcp-market/core": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

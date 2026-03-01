@@ -1,0 +1,28 @@
+{
+  "name": "@mcp-market/government",
+  "version": "0.1.0",
+  "description": "MCP server for US Congress and state legislature data via Congress.gov and Open States APIs",
+  "type": "module",
+  "bin": {
+    "mcp-market-government": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "check-types": "tsc --noEmit"
+  },
+  "files": ["dist"],
+  "keywords": ["mcp", "government", "congress", "legislation", "open-states", "ai-tools", "model-context-protocol"],
+  "license": "MIT",
+  "dependencies": {
+    "@mcp-market/core": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
