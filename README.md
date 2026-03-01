@@ -26,15 +26,15 @@
 
 ```bash
 # Use directly via npx (no install needed)
-npx @mcp-market/weather
+npx @mcp-mk/weather
 
 # Or install globally
-npm install -g @mcp-market/weather
+npm install -g @mcp-mk/weather
 ```
 
 > [!NOTE]
 > Servers marked with :key: require an API key via environment variable.
-> Example: `OMDB_API_KEY=your-key npx @mcp-market/movies`
+> Example: `OMDB_API_KEY=your-key npx @mcp-mk/movies`
 
 ### Claude Desktop
 
@@ -45,11 +45,11 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or 
   "mcpServers": {
     "mcp-market-weather": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/weather"]
+      "args": ["-y", "@mcp-mk/weather"]
     },
     "mcp-market-crypto": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/crypto"]
+      "args": ["-y", "@mcp-mk/crypto"]
     }
   }
 }
@@ -69,7 +69,7 @@ Go to **Settings → MCP → Add Server** and add:
   "mcpServers": {
     "mcp-market-weather": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/weather"]
+      "args": ["-y", "@mcp-mk/weather"]
     }
   }
 }
@@ -84,7 +84,7 @@ Create or edit `.vscode/mcp.json` in your project:
   "servers": {
     "mcp-market-weather": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/weather"]
+      "args": ["-y", "@mcp-mk/weather"]
     }
   }
 }
@@ -100,7 +100,7 @@ Some servers require API keys. Pass them via the `env` field:
   "mcpServers": {
     "movies": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/movies"],
+      "args": ["-y", "@mcp-mk/movies"],
       "env": {
         "OMDB_API_KEY": "your-key-here"
       }
@@ -188,19 +188,19 @@ Here's a real-world config with multiple servers:
   "mcpServers": {
     "weather": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/weather"]
+      "args": ["-y", "@mcp-mk/weather"]
     },
     "crypto": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/crypto"]
+      "args": ["-y", "@mcp-mk/crypto"]
     },
     "wikipedia": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/wikipedia"]
+      "args": ["-y", "@mcp-mk/wikipedia"]
     },
     "space": {
       "command": "npx",
-      "args": ["-y", "@mcp-market/space"],
+      "args": ["-y", "@mcp-mk/space"],
       "env": {
         "NASA_API_KEY": "DEMO_KEY"
       }
@@ -229,10 +229,10 @@ pnpm run build     # builds all 31 packages via Turborepo
 
 ```bash
 # Build a single package
-pnpm --filter @mcp-market/weather run build
+pnpm --filter @mcp-mk/weather run build
 
 # Dev mode with auto-reload
-pnpm --filter @mcp-market/weather run dev
+pnpm --filter @mcp-mk/weather run dev
 
 # Clean all build artifacts
 pnpm run clean
@@ -263,7 +263,7 @@ Every server follows the same pattern:
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { fetchJSON, buildURL, text, error, keyValue } from "@mcp-market/core";
+import { fetchJSON, buildURL, text, error, keyValue } from "@mcp-mk/core";
 
 const server = new McpServer({ name: "mcp-market-xxx", version: "0.1.0" });
 
@@ -295,7 +295,7 @@ Contributions welcome! Here's how to add a new MCP server:
 
 1. Fork and clone the repo
 2. Create `packages/your-api/` with `package.json`, `tsconfig.json`, `src/index.ts`
-3. Follow the pattern above &mdash; use `@mcp-market/core` utilities
+3. Follow the pattern above &mdash; use `@mcp-mk/core` utilities
 4. Run `pnpm install && pnpm run build` to verify
 5. Open a PR
 

@@ -10,7 +10,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@mcp-market/wikipedia",
+      "identifier": "@mcp-mk/wikipedia",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"

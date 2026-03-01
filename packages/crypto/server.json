@@ -10,7 +10,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@mcp-market/crypto",
+      "identifier": "@mcp-mk/crypto",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"

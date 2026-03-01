@@ -10,7 +10,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@mcp-market/dictionary",
+      "identifier": "@mcp-mk/dictionary",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"

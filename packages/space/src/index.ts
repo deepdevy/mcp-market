@@ -3,8 +3,8 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { fetchJSON, buildURL, text, error, keyValue, numberedList, truncate } from "@mcp-market/core";
-import { optionalEnv } from "@mcp-market/core";
+import { fetchJSON, buildURL, text, error, keyValue, numberedList, truncate } from "@mcp-mk/core";
+import { optionalEnv } from "@mcp-mk/core";
 
 const server = new McpServer({
   name: "mcp-market-space",

@@ -1,5 +1,5 @@
 {
-  "name": "@mcp-market/government",
+  "name": "@mcp-mk/government",
   "version": "0.1.0",
   "description": "MCP server for US Congress and state legislature data via Congress.gov and Open States APIs",
   "type": "module",
@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@mcp-market/core": "workspace:*",
+    "@mcp-mk/core": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.12.0",
     "zod": "^3.24.0"
   },

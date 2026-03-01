@@ -10,7 +10,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@mcp-market/birds",
+      "identifier": "@mcp-mk/birds",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"

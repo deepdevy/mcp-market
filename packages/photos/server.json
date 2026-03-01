@@ -10,7 +10,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@mcp-market/photos",
+      "identifier": "@mcp-mk/photos",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"

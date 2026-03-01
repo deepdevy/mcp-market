@@ -10,7 +10,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@mcp-market/news",
+      "identifier": "@mcp-mk/news",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"

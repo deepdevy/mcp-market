@@ -37,11 +37,11 @@ MCP Market servers span multiple categories in awesome-mcp-servers:
 >
 > - **30 servers**, **133 tools**, **40+ public APIs**
 > - **22 servers** require zero configuration (no API keys)
-> - All packages published to npm under `@mcp-market/*` scope
+> - All packages published to npm under `@mcp-mk/*` scope
 > - Works with Claude Desktop, Cursor, VS Code, and any MCP-compatible client
 > - TypeScript, strict mode, Zod validation, Turborepo monorepo
 >
 > ```bash
 > # Example: add weather to Claude Desktop
-> npx @mcp-market/weather
+> npx @mcp-mk/weather
 > ```

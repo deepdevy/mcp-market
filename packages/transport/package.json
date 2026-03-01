@@ -1,5 +1,5 @@
 {
-  "name": "@mcp-market/transport",
+  "name": "@mcp-mk/transport",
   "version": "0.1.0",
   "description": "MCP server for EV charging stations and railway stations via Open Charge Map and Overpass APIs — no API key required",
   "type": "module",
@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@mcp-market/core": "workspace:*",
+    "@mcp-mk/core": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.12.0",
     "zod": "^3.24.0"
   },

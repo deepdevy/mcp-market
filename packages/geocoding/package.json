@@ -1,5 +1,5 @@
 {
-  "name": "@mcp-market/geocoding",
+  "name": "@mcp-mk/geocoding",
   "version": "0.1.0",
   "description": "MCP server for geocoding via Nominatim/OpenStreetMap — no API key required",
   "type": "module",
@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@mcp-market/core": "workspace:*",
+    "@mcp-mk/core": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.12.0",
     "zod": "^3.24.0"
   },

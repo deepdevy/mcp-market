@@ -1,6 +1,6 @@
 #!/bin/bash
-# Publish all @mcp-market packages to npm
-# Prerequisites: npm login + npm org create mcp-market
+# Publish all @mcp-mk packages to npm
+# Prerequisites: npm login + npm org create mcp-mk
 
 set -e
 
@@ -15,7 +15,7 @@ echo ""
 echo "🚀 Publishing packages..."
 
 # Publish core first (dependency)
-echo "Publishing @mcp-market/core..."
+echo "Publishing @mcp-mk/core..."
 cd packages/core
 pnpm publish --access public --no-git-checks
 cd ../..
@@ -25,7 +25,7 @@ for dir in packages/*/; do
   pkg_name=$(node -p "require('./${dir}package.json').name")
   
   # Skip core (already published)
-  if [ "$pkg_name" = "@mcp-market/core" ]; then
+  if [ "$pkg_name" = "@mcp-mk/core" ]; then
     continue
   fi
   
@@ -38,4 +38,4 @@ done
 echo ""
 echo "✅ All packages published!"
 echo ""
-echo "Verify at: https://www.npmjs.com/org/mcp-market"
+echo "Verify at: https://www.npmjs.com/org/mcp-mk"

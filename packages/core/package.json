@@ -1,5 +1,5 @@
 {
-  "name": "@mcp-market/core",
+  "name": "@mcp-mk/core",
   "version": "0.1.0",
   "description": "Shared utilities for MCP Market servers",
   "type": "module",
