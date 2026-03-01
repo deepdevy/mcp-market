@@ -12,12 +12,8 @@ const server = new McpServer({
 
 // ── Types ──────────────────────────────────────────────────
 
-interface OpenSearchResult {
-  query: string;
-  titles: string[];
-  descriptions: string[];
-  urls: string[];
-}
+// OpenSearch returns [query, titles[], descriptions[], urls[]]
+type OpenSearchResult = [string, string[], string[], string[]];
 
 interface SummaryResponse {
   title: string;
@@ -74,14 +70,15 @@ server.tool(
       })
     );
 
-    if (!data.titles || data.titles.length === 0) {
+    const [, titles, descriptions, urls] = data;
+    if (!titles || titles.length === 0) {
       return error(`No results found for "${query}"`);
     }
 
-    const results = data.titles.map((title, i) => ({
+    const results = titles.map((title, i) => ({
       title,
-      description: data.descriptions[i] || "",
-      url: data.urls[i] || "",
+      description: descriptions[i] || "",
+      url: urls[i] || "",
     }));
 
     return text(

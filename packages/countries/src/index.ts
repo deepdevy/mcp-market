@@ -41,9 +41,7 @@ server.tool(
   },
   async ({ name }) => {
     const data = await fetchJSON<CountryData[]>(
-      buildURL("https://restcountries.com/v3.1/name/{name}", {
-        fullText: "false",
-      }).replace("{name}", encodeURIComponent(name))
+      `https://restcountries.com/v3.1/name/${encodeURIComponent(name)}?fullText=false`
     );
 
     if (!Array.isArray(data) || data.length === 0) {
@@ -87,15 +85,11 @@ server.tool(
   },
   async ({ country1, country2 }) => {
     const data1 = await fetchJSON<CountryData[]>(
-      buildURL("https://restcountries.com/v3.1/name/{name}", {
-        fullText: "false",
-      }).replace("{name}", encodeURIComponent(country1))
+      `https://restcountries.com/v3.1/name/${encodeURIComponent(country1)}?fullText=false`
     );
 
     const data2 = await fetchJSON<CountryData[]>(
-      buildURL("https://restcountries.com/v3.1/name/{name}", {
-        fullText: "false",
-      }).replace("{name}", encodeURIComponent(country2))
+      `https://restcountries.com/v3.1/name/${encodeURIComponent(country2)}?fullText=false`
     );
 
     if (!Array.isArray(data1) || data1.length === 0) {
@@ -136,10 +130,7 @@ server.tool(
   },
   async ({ language }) => {
     const data = await fetchJSON<CountryData[]>(
-      buildURL("https://restcountries.com/v3.1/lang/{language}", {}).replace(
-        "{language}",
-        encodeURIComponent(language)
-      )
+      `https://restcountries.com/v3.1/lang/${encodeURIComponent(language)}`
     );
 
     if (!Array.isArray(data) || data.length === 0) {
@@ -164,10 +155,7 @@ server.tool(
   },
   async ({ currency }) => {
     const data = await fetchJSON<CountryData[]>(
-      buildURL("https://restcountries.com/v3.1/currency/{currency}", {}).replace(
-        "{currency}",
-        encodeURIComponent(currency)
-      )
+      `https://restcountries.com/v3.1/currency/${encodeURIComponent(currency)}`
     );
 
     if (!Array.isArray(data) || data.length === 0) {

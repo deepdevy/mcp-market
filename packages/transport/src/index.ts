@@ -3,13 +3,14 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { fetchJSON, buildURL, text, error, keyValue, numberedList } from "@mcp-market/core";
+import { fetchJSON, buildURL, text, error, keyValue, numberedList, optionalEnv } from "@mcp-market/core";
 
 const server = new McpServer({
   name: "mcp-market-transport",
   version: "0.1.0",
 });
 
+const OCM_KEY = optionalEnv("OPEN_CHARGE_MAP_KEY", "");
 // ── Types ──────────────────────────────────────────────────
 
 interface ChargerPOI {
@@ -99,6 +100,7 @@ server.tool(
     const data = await fetchJSON<ChargerResponse>(
       buildURL("https://api.openchargemap.io/v3/poi/", {
         output: "json",
+        key: OCM_KEY || undefined,
         latitude: lat,
         longitude: lng,
         distance: distance,
@@ -152,6 +154,7 @@ server.tool(
     const data = await fetchJSON<ChargerResponse>(
       buildURL("https://api.openchargemap.io/v3/poi/", {
         output: "json",
+        key: OCM_KEY || undefined,
         countrycode: countrycode,
         maxresults: maxresults,
         compact: "true",
@@ -191,6 +194,7 @@ server.tool(
     const data = await fetchJSON<ChargerDetailsResponse>(
       buildURL("https://api.openchargemap.io/v3/poi/", {
         output: "json",
+        key: OCM_KEY || undefined,
         chargepointid: id,
         verbose: "true",
       })
